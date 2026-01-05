@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contacto · JRS</title>
+
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -11,7 +13,7 @@
   <div class="wrap">
     <div class="topbar">
       <div class="brand">
-        <div class="mark" aria-hidden="true"></div>
+        <img src="assets/logo-jrs.svg" alt="Logo JRS" style="width:40px;height:40px;" onerror="this.onerror=null;this.src='assets/logo-jrs.png';" />
         <div class="brandtext">
           <p class="title">Junior Research Seminar</p>
           <div class="sub">Contacto</div>
@@ -34,36 +36,41 @@
 </header>
 
 <main class="wrap">
-  <h1>Contacto</h1>
-  <p class="lead">Para proponer una sesión, manda un correo con el paquete mínimo (título, resumen corto, fecha tentativa, link al draft si existe).</p>
-
-  <section class="card">
-    <h2>Coordinación</h2>
-    <p><b>Nombre:</b> (tu nombre)</p>
-    <p><b>Email:</b> <a href="mailto:TUEMAIL@dominio.com">TUEMAIL@dominio.com</a></p>
+  <section class="hero" style="padding:18px 18px;">
+    <h1 style="margin-top:0;">Contacto</h1>
+    <p class="lead">Para proponer una sesión: manda un correo con el paquete mínimo. Menos ida y vuelta, más calendario.</p>
   </section>
 
-  <section class="card" style="margin-top:14px;">
-    <h2>Plantilla rápida</h2>
-    <p class="small">Copia esto en tu correo:</p>
-    <div style="background: rgba(0,51,160,.06); border:1px solid rgba(0,51,160,.18); border-radius:16px; padding:12px 12px;">
-      <div style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 13px;">
-        Título:<br/>
-        Resumen (5–7 líneas):<br/>
-        Tipo de avance:<br/>
-        Fecha tentativa:<br/>
-        Link al draft (si existe):<br/>
-        Discussant (si ya está definido):
+  <div class="grid">
+    <section class="card">
+      <h2>Coordinación</h2>
+      <p><b>Nombre:</b> (tu nombre)</p>
+      <p><b>Email:</b> <a href="mailto:TUEMAIL@dominio.com">TUEMAIL@dominio.com</a></p>
+      <p class="small">Si quieres, luego dejamos un mailto con asunto prellenado.</p>
+    </section>
+
+    <section class="card">
+      <h2>Plantilla mínima</h2>
+      <p class="small">Copia y pega:</p>
+      <div style="background: rgba(255,255,255,.78); border:1px solid rgba(7,18,41,.10); border-radius:16px; padding:12px 12px;">
+        <div style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 13px; color:#071229;">
+          Título:<br/>
+          Resumen (5–7 líneas):<br/>
+          Tipo de avance (paper/capítulo/nota):<br/>
+          Fecha tentativa:<br/>
+          Link al draft (si existe):<br/>
+          Discussant (si ya está definido):
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </main>
 
 <footer>
   <div class="wave" aria-hidden="true"></div>
   <div class="footer-inner">
     <div>© <span id="year"></span> JRS</div>
-    <div class="small">Mejor email directo que formulario sin backend.</div>
+    <div class="small">Contacto directo > formulario sin backend.</div>
   </div>
 </footer>
 
