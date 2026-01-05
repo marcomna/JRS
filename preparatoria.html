@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preparatoria · JRS</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <h1>Junior Research Seminar</h1>
+      <div class="tag">Preparatoria</div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="calendario.html">Calendario</a>
+      <a href="archivo.html">Archivo histórico</a>
+      <a class="active" href="preparatoria.html">Preparatoria</a>
+      <a href="normas.html">Normas</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2>Preparatoria</h2>
+  <p>Material para preparar una buena sesión, ya sea como ponente o discussant.</p>
+
+  <div class="card">
+    <p><b>Checklist para ponentes</b></p>
+    <ul>
+      <li>Resumen de 1 página (motivación, contribución, datos, estrategia empírica).</li>
+      <li>Versión PDF del paper (o draft) con numeración de páginas.</li>
+      <li>Slides opcionales (máximo 12–15).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <p><b>Checklist para discussants</b></p>
+    <ul>
+      <li>3 fortalezas, 3 debilidades, 3 recomendaciones accionables.</li>
+      <li>Comentarios sobre identificación/validez interna y medición.</li>
+      <li>Propuesta concreta de “siguiente paso” del paper.</li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="year"></span> Junior Research Seminar</div>
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
