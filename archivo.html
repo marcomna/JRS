@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Archivo histórico · JRS</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <h1>Junior Research Seminar</h1>
+      <div class="tag">Archivo histórico</div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="calendario.html">Calendario</a>
+      <a class="active" href="archivo.html">Archivo histórico</a>
+      <a href="preparatoria.html">Preparatoria</a>
+      <a href="normas.html">Normas</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2>Archivo histórico</h2>
+
+  <div class="card">
+    <p><b>Edición 2025 (ejemplo)</b></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Tema / Paper</th>
+          <th>Ponente</th>
+          <th>Material</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>(2025-09-XX)</td>
+          <td>(Título)</td>
+          <td>(Nombre)</td>
+          <td>(link)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">© <span id="year"></span> Junior Research Seminar</div>
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
