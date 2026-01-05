@@ -449,3 +449,14 @@ footer{
   .hero::before, .hero::after{ animation: none !important; }
   .cursor{ animation: none !important; }
 }
+
+/* --- Fix definitivo: logo del header --- */
+.brand .logo-header{
+  width: 48px;
+  height: 48px;
+  max-width: 48px;
+  max-height: 48px;
+  display: block;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
