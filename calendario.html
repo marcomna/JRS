@@ -9,10 +9,19 @@
 <body>
 <header>
   <div class="wrap">
-    <div class="brand">
-      <h1>Junior Research Seminar</h1>
-      <div class="tag">Calendario</div>
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="brand-text">
+          <p class="title">Junior Research Seminar</p>
+          <div class="sub">Calendario</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="badge"><span class="dot"></span>Sesiones</span>
+      </div>
     </div>
+
     <nav>
       <a href="index.html">Home</a>
       <a class="active" href="calendario.html">Calendario</a>
@@ -25,38 +34,55 @@
 </header>
 
 <main class="wrap">
-  <h2>Calendario</h2>
-  <p class="small">Lista de sesiones (actual). Para ediciones anteriores, ver <a href="archivo.html">Archivo histórico</a>.</p>
+  <h1 class="page">Calendario</h1>
+  <p class="small">Sesiones activas. Para ediciones previas, ver <a href="archivo.html">Archivo histórico</a>.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Fecha</th>
-        <th>Tema / Paper</th>
-        <th>Ponente</th>
-        <th>Discussant</th>
-        <th>Material</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>(2026-01-XX)</td>
-        <td>(Título / referencia corta)</td>
-        <td>(Nombre)</td>
-        <td>(Nombre)</td>
-        <td>(link a PDF / slides)</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="card">
-    <p><b>Cómo proponer una sesión:</b> revisa <a href="normas.html">Normas</a> y envía tu propuesta en <a href="contacto.html">Contacto</a>.</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Tema / Paper</th>
+          <th>Ponente</th>
+          <th>Discussant</th>
+          <th>Material</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>(2026-01-XX)</td>
+          <td>(Título / referencia corta)</td>
+          <td>(Nombre)</td>
+          <td>(Nombre)</td>
+          <td>(link a PDF / slides)</td>
+        </tr>
+        <tr>
+          <td>(2026-02-XX)</td>
+          <td>(Título / referencia corta)</td>
+          <td>(Nombre)</td>
+          <td>(Nombre)</td>
+          <td>(link a PDF / slides)</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+
+  <section class="card">
+    <h3>Proponer una sesión</h3>
+    <p>Revisa <a href="normas.html">Normas</a> y manda tu propuesta desde <a href="contacto.html">Contacto</a>.</p>
+    <div class="codebox">Incluye: título, resumen (5–7 líneas), tipo de avance, fecha tentativa y link al draft (si existe).</div>
+  </section>
 </main>
 
 <footer>
-  <div class="wrap">© <span id="year"></span> Junior Research Seminar</div>
+  <div class="wrap">
+    <div>© <span id="year"></span> Junior Research Seminar</div>
+    <div class="small">Actualiza esta tabla editando el HTML.</div>
+  </div>
 </footer>
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
