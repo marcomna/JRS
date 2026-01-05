@@ -11,16 +11,15 @@
   <div class="wrap">
     <div class="topbar">
       <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div class="brand-text">
+        <div class="mark" aria-hidden="true"></div>
+        <div class="brandtext">
           <p class="title">Junior Research Seminar</p>
           <div class="sub">Economía · Tec de Monterrey</div>
         </div>
       </div>
-
-      <div class="badges">
-        <span class="badge"><span class="dot"></span>Sesiones activas</span>
-        <span class="badge">CDMX</span>
+      <div class="pills">
+        <span class="pill"><b>Tec Blue</b> · 286C</span>
+        <span class="pill">CDMX</span>
       </div>
     </div>
 
@@ -37,48 +36,53 @@
 
 <main class="wrap">
   <section class="hero">
-    <div class="kicker">
-      <span class="pill"><strong>JRS</strong> · discusión de investigación en progreso</span>
-    </div>
-    <h2>Un espacio simple para presentar, discutir y mejorar papers.</h2>
-    <p>Formato breve, discusión asignada y feedback accionable. Calendario público, archivo histórico y guía de preparación para ponentes y discussants.</p>
+    <h1>JRS: discusión de investigación en progreso, sin drama y con señal.</h1>
+    <p class="lead">Sesiones con ponente + discussant + preguntas. Calendario público, archivo histórico y guía práctica para preparar presentaciones y discusiones.</p>
 
     <div class="actions">
-      <a class="btn btn-primary" href="calendario.html">Ver calendario</a>
-      <a class="btn btn-ghost" href="normas.html">Normas de presentación</a>
-      <a class="btn btn-ghost" href="preparatoria.html">Preparatoria</a>
+      <a href="calendario.html" style="text-decoration:none;">
+        <button class="btn-io">
+          Ver calendario
+          <span class="icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+          </span>
+        </button>
+      </a>
+      <a class="btn-ghost" href="normas.html">Normas</a>
+      <a class="btn-ghost" href="preparatoria.html">Preparatoria</a>
+      <a class="btn-ghost" href="archivo.html">Archivo</a>
     </div>
   </section>
 
   <div class="grid">
     <section class="card">
-      <h3>Próxima sesión</h3>
+      <h2>Próxima sesión</h2>
       <p><b>Fecha:</b> (por definir)</p>
-      <p><b>Ponente:</b> (por definir)</p>
-      <p><b>Tema:</b> (título / idea central)</p>
-      <p class="small">Completa los detalles en <a href="calendario.html">Calendario</a>.</p>
+      <p><b>Tema/Paper:</b> (título corto)</p>
+      <p><b>Ponente:</b> (nombre)</p>
+      <p class="small">Detalles en <a href="calendario.html">Calendario</a>.</p>
     </section>
 
     <section class="card">
-      <h3>Cómo participar</h3>
+      <h2>Cómo proponer sesión</h2>
       <ul>
-        <li>Propón una sesión (título + resumen corto + fecha tentativa).</li>
-        <li>Envía el draft 48–72h antes para discusión seria.</li>
-        <li>Si serás discussant, prepara feedback con 3 fortalezas, 3 riesgos, 3 acciones.</li>
+        <li>Título + resumen (5–7 líneas).</li>
+        <li>Tipo de avance (paper / capítulo / nota metodológica).</li>
+        <li>Fecha tentativa y si ya tienes discussant.</li>
+        <li>Draft PDF (ideal: 48–72h antes).</li>
       </ul>
-      <p class="small">Todo lo formal está en <a href="normas.html">Normas</a> y <a href="contacto.html">Contacto</a>.</p>
+      <p class="small">Envíalo desde <a href="contacto.html">Contacto</a>.</p>
     </section>
   </div>
 
-  <hr class="hr" />
-
-  <p class="small">Última actualización: <span id="lastUpdated"></span></p>
+  <p class="small" style="margin-top:14px;">Última actualización: <span id="lastUpdated"></span></p>
 </main>
 
 <footer>
-  <div class="wrap">
+  <div class="wave" aria-hidden="true"></div>
+  <div class="footer-inner">
     <div>© <span id="year"></span> Junior Research Seminar</div>
-    <div class="small">Tec Blue: Pantone 286C (#0033A0)</div>
+    <div class="small">Tec Blue Pantone 286C · #0033A0</div>
   </div>
 </footer>
 
