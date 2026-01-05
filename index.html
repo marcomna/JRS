@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Junior Research Seminar</title>
+
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -11,15 +13,15 @@
   <div class="wrap">
     <div class="topbar">
       <div class="brand">
-        <div class="mark" aria-hidden="true"></div>
+        <img src="assets/logo-jrs.svg" alt="Logo JRS" style="width:40px;height:40px;" onerror="this.onerror=null;this.src='assets/logo-jrs.png';" />
         <div class="brandtext">
           <p class="title">Junior Research Seminar</p>
-          <div class="sub">Economía · Tec de Monterrey</div>
+          <div class="sub">Licenciatura en Economía · Campus Ciudad de México</div>
         </div>
       </div>
       <div class="pills">
         <span class="pill"><b>Tec Blue</b> · 286C</span>
-        <span class="pill">CDMX</span>
+        <span class="pill">Desde <b>febrero 2025</b></span>
       </div>
     </div>
 
@@ -36,46 +38,88 @@
 
 <main class="wrap">
   <section class="hero">
-    <h1>JRS: discusión de investigación en progreso, sin drama y con señal.</h1>
-    <p class="lead">Sesiones con ponente + discussant + preguntas. Calendario público, archivo histórico y guía práctica para preparar presentaciones y discusiones.</p>
-
-    <div class="actions">
-      <a href="calendario.html" style="text-decoration:none;">
-        <button class="btn-io">
-          Ver calendario
-          <span class="icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+    <div class="hero-inner">
+      <div>
+        <div class="hero-kicker">
+          <span class="kicker-tag"><strong>JRS</strong> · iniciativa de la Licenciatura en Economía (CCM)</span>
+          <span class="dynamic-line">
+            Semillero de <span class="dynamic-word" id="rotatingWord">ideas</span><span class="cursor">|</span>
           </span>
-        </button>
-      </a>
-      <a class="btn-ghost" href="normas.html">Normas</a>
-      <a class="btn-ghost" href="preparatoria.html">Preparatoria</a>
-      <a class="btn-ghost" href="archivo.html">Archivo</a>
+        </div>
+
+        <h1>Un espacio para presentar investigación y discutir temas padres, con retroalimentación útil.</h1>
+
+        <p class="lead">
+          El Junior Research Seminar es una iniciativa de la Licenciatura en Economía del Campus Ciudad de México.
+          Su objetivo es que investigadorxs senior y junior (alumnxs activxs) presenten trabajos de investigación
+          concluidos o en proceso, para convertir cada sesión en un semillero de ideas, retroalimentación y discusión.
+          Inició en febrero de 2025.
+        </p>
+
+        <div class="actions">
+          <a href="calendario.html" style="text-decoration:none;">
+            <button class="btn-io">
+              Ver calendario
+              <span class="icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+              </span>
+            </button>
+          </a>
+          <a class="btn-ghost" href="normas.html">Normas</a>
+          <a class="btn-ghost" href="preparatoria.html">Guía rápida</a>
+          <a class="btn-ghost" href="archivo.html">Archivo</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="num" id="monthsSince">0</div>
+            <div class="label">meses desde el arranque (feb 2025)</div>
+          </div>
+          <div class="stat">
+            <div class="num" id="daysSince">0</div>
+            <div class="label">días construyendo comunidad</div>
+          </div>
+          <div class="stat">
+            <div class="num" id="lastUpdated">—</div>
+            <div class="label">última actualización del sitio</div>
+          </div>
+        </div>
+
+        <p class="small" style="margin-top:12px;">
+          ¿Quieres proponer sesión? En <a href="contacto.html">Contacto</a> está la plantilla mínima para hacerlo rápido.
+        </p>
+      </div>
+
+      <aside class="logo-panel">
+        <img class="logo-big" src="assets/logo-jrs.svg" alt="Logo Junior Research Seminar" onerror="this.onerror=null;this.src='assets/logo-jrs.png';" />
+        <div class="logo-caption">
+          Logo oficial del JRS. Si algún día hacemos merch, este escudo paga la renta.
+        </div>
+      </aside>
     </div>
   </section>
 
   <div class="grid">
     <section class="card">
-      <h2>Próxima sesión</h2>
-      <p><b>Fecha:</b> (por definir)</p>
-      <p><b>Tema/Paper:</b> (título corto)</p>
-      <p><b>Ponente:</b> (nombre)</p>
-      <p class="small">Detalles en <a href="calendario.html">Calendario</a>.</p>
+      <h2>Qué pasa en una sesión</h2>
+      <ul>
+        <li>Ponente presenta motivación, aporte y estrategia (sin leer el paper).</li>
+        <li>Discussant da feedback estructurado (fortalezas, riesgos, acciones).</li>
+        <li>Discusión abierta, con foco en mejorar el trabajo.</li>
+      </ul>
+      <p class="small">Formato y tiempos en <a href="normas.html">Normas</a>.</p>
     </section>
 
     <section class="card">
-      <h2>Cómo proponer sesión</h2>
+      <h2>Quién puede presentar</h2>
       <ul>
-        <li>Título + resumen (5–7 líneas).</li>
-        <li>Tipo de avance (paper / capítulo / nota metodológica).</li>
-        <li>Fecha tentativa y si ya tienes discussant.</li>
-        <li>Draft PDF (ideal: 48–72h antes).</li>
+        <li>Investigadorxs senior invitados.</li>
+        <li>Investigadorxs junior: alumnxs activxs con proyectos en curso o concluidos.</li>
+        <li>Trabajos teóricos, empíricos o metodológicos.</li>
       </ul>
-      <p class="small">Envíalo desde <a href="contacto.html">Contacto</a>.</p>
+      <p class="small">Checklist de preparación en <a href="preparatoria.html">Preparatoria</a>.</p>
     </section>
   </div>
-
-  <p class="small" style="margin-top:14px;">Última actualización: <span id="lastUpdated"></span></p>
 </main>
 
 <footer>
@@ -87,9 +131,32 @@
 </footer>
 
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+  // Rotating word (simple, zip-like vibe)
+  const words = ["ideas", "feedback", "discusión", "papers", "métodos", "preguntas"];
+  let wi = 0;
+  const rotating = document.getElementById("rotatingWord");
+  setInterval(() => {
+    wi = (wi + 1) % words.length;
+    rotating.textContent = words[wi];
+  }, 1400);
+
+  // Counters since Feb 2025
+  const start = new Date("2025-02-01T00:00:00");
+  const now = new Date();
+
+  const ms = now - start;
+  const days = Math.floor(ms / (1000*60*60*24));
+
+  // months difference (approx, but stable)
+  const months = (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
+  document.getElementById("monthsSince").textContent = Math.max(0, months);
+  document.getElementById("daysSince").textContent = Math.max(0, days);
+
+  // last updated
   document.getElementById("lastUpdated").textContent =
     new Date(document.lastModified).toLocaleDateString("es-MX");
+
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
