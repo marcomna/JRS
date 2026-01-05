@@ -9,10 +9,21 @@
 <body>
 <header>
   <div class="wrap">
-    <div class="brand">
-      <h1>Junior Research Seminar</h1>
-      <div class="tag">Economía · Tec de Monterrey</div>
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="brand-text">
+          <p class="title">Junior Research Seminar</p>
+          <div class="sub">Economía · Tec de Monterrey</div>
+        </div>
+      </div>
+
+      <div class="badges">
+        <span class="badge"><span class="dot"></span>Sesiones activas</span>
+        <span class="badge">CDMX</span>
+      </div>
     </div>
+
     <nav>
       <a class="active" href="index.html">Home</a>
       <a href="calendario.html">Calendario</a>
@@ -25,18 +36,41 @@
 </header>
 
 <main class="wrap">
-  <h2>Home</h2>
+  <section class="hero">
+    <div class="kicker">
+      <span class="pill"><strong>JRS</strong> · discusión de investigación en progreso</span>
+    </div>
+    <h2>Un espacio simple para presentar, discutir y mejorar papers.</h2>
+    <p>Formato breve, discusión asignada y feedback accionable. Calendario público, archivo histórico y guía de preparación para ponentes y discussants.</p>
 
-  <div class="card">
-    <p><b>Qué es:</b> Seminario para discutir investigación en progreso (papers, capítulos, notas metodológicas).</p>
-    <p><b>Formato:</b> Presentación + discusión asignada + preguntas abiertas.</p>
-    <p><b>Audiencia:</b> Estudiantes y comunidad académica interesada en investigación aplicada.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="calendario.html">Ver calendario</a>
+      <a class="btn btn-ghost" href="normas.html">Normas de presentación</a>
+      <a class="btn btn-ghost" href="preparatoria.html">Preparatoria</a>
+    </div>
+  </section>
+
+  <div class="grid">
+    <section class="card">
+      <h3>Próxima sesión</h3>
+      <p><b>Fecha:</b> (por definir)</p>
+      <p><b>Ponente:</b> (por definir)</p>
+      <p><b>Tema:</b> (título / idea central)</p>
+      <p class="small">Completa los detalles en <a href="calendario.html">Calendario</a>.</p>
+    </section>
+
+    <section class="card">
+      <h3>Cómo participar</h3>
+      <ul>
+        <li>Propón una sesión (título + resumen corto + fecha tentativa).</li>
+        <li>Envía el draft 48–72h antes para discusión seria.</li>
+        <li>Si serás discussant, prepara feedback con 3 fortalezas, 3 riesgos, 3 acciones.</li>
+      </ul>
+      <p class="small">Todo lo formal está en <a href="normas.html">Normas</a> y <a href="contacto.html">Contacto</a>.</p>
+    </section>
   </div>
 
-  <div class="card">
-    <p><b>Próxima sesión:</b> <i>(fecha)</i> · <i>(título/paper)</i> · <i>(ponente)</i></p>
-    <p class="small">Detalles completos en <a href="calendario.html">Calendario</a>.</p>
-  </div>
+  <hr class="hr" />
 
   <p class="small">Última actualización: <span id="lastUpdated"></span></p>
 </main>
@@ -44,12 +78,14 @@
 <footer>
   <div class="wrap">
     <div>© <span id="year"></span> Junior Research Seminar</div>
+    <div class="small">Tec Blue: Pantone 286C (#0033A0)</div>
   </div>
 </footer>
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
-  document.getElementById("lastUpdated").textContent = new Date(document.lastModified).toLocaleDateString("es-MX");
+  document.getElementById("lastUpdated").textContent =
+    new Date(document.lastModified).toLocaleDateString("es-MX");
 </script>
 </body>
 </html>
