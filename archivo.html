@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Archivo histórico · JRS</title>
+
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -11,7 +13,7 @@
   <div class="wrap">
     <div class="topbar">
       <div class="brand">
-        <div class="mark" aria-hidden="true"></div>
+        <img src="assets/logo-jrs.svg" alt="Logo JRS" style="width:40px;height:40px;" onerror="this.onerror=null;this.src='assets/logo-jrs.png';" />
         <div class="brandtext">
           <p class="title">Junior Research Seminar</p>
           <div class="sub">Archivo histórico</div>
@@ -34,12 +36,14 @@
 </header>
 
 <main class="wrap">
-  <h1>Archivo histórico</h1>
-  <p class="lead">Sesiones pasadas organizadas por semestre/año.</p>
+  <section class="hero" style="padding:18px 18px;">
+    <h1 style="margin-top:0;">Archivo histórico</h1>
+    <p class="lead">Sesiones pasadas organizadas por semestre/año, con links a materiales cuando sean públicos.</p>
+  </section>
 
-  <section class="card">
+  <section class="card" style="margin-top:14px;">
     <h2>Edición 2025 (ejemplo)</h2>
-    <div class="table-wrap">
+    <div class="table-wrap" style="margin-top:10px;">
       <table>
         <thead>
           <tr>
@@ -51,7 +55,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>(2025-10-XX)</td>
+            <td>(2025-XX-XX)</td>
             <td>(Título)</td>
             <td>(Nombre)</td>
             <td>(link)</td>
@@ -59,6 +63,7 @@
         </tbody>
       </table>
     </div>
+    <p class="small">Sugerencia: separa por 2025-1, 2025-2, etc., si crece rápido.</p>
   </section>
 </main>
 
@@ -66,7 +71,7 @@
   <div class="wave" aria-hidden="true"></div>
   <div class="footer-inner">
     <div>© <span id="year"></span> JRS</div>
-    <div class="small">Mantén links a PDFs/slides si son públicos.</div>
+    <div class="small">Orden mata caos.</div>
   </div>
 </footer>
 
