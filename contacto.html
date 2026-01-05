@@ -9,10 +9,19 @@
 <body>
 <header>
   <div class="wrap">
-    <div class="brand">
-      <h1>Junior Research Seminar</h1>
-      <div class="tag">Contacto</div>
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="brand-text">
+          <p class="title">Junior Research Seminar</p>
+          <div class="sub">Contacto</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="badge"><span class="dot"></span>Propuestas</span>
+      </div>
     </div>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="calendario.html">Calendario</a>
@@ -25,28 +34,46 @@
 </header>
 
 <main class="wrap">
-  <h2>Contacto</h2>
+  <h1 class="page">Contacto</h1>
 
-  <div class="card">
-    <p><b>Coordinación:</b> (Tu nombre)</p>
+  <section class="card">
+    <h3>Coordinación</h3>
+    <p><b>Nombre:</b> (tu nombre)</p>
     <p><b>Email:</b> <a href="mailto:TUEMAIL@dominio.com">TUEMAIL@dominio.com</a></p>
-    <p class="small">Sugerencia: usa un correo institucional o uno dedicado al seminario.</p>
-  </div>
+    <p class="small">Tip: usa un correo dedicado al seminario si no quieres mezclar bandejas.</p>
+  </section>
 
-  <div class="card">
-    <p><b>Para proponer sesión, incluye:</b></p>
-    <ul>
-      <li>Título y resumen (5–7 líneas)</li>
-      <li>Tipo de avance (paper completo, capítulo, nota metodológica)</li>
-      <li>Fecha tentativa</li>
-      <li>Links a draft/slides si ya existen</li>
-    </ul>
-  </div>
+  <section class="card">
+    <h3>Qué incluir al proponer sesión</h3>
+    <div class="codebox">
+      Título + resumen (5–7 líneas) · tipo de avance · fecha tentativa · link al draft (si existe) ·
+      si necesitas discussant asignado o ya tienes a alguien.
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>Formulario (opcional, no envía solo)</h3>
+    <p class="small">Esto es solo visual. Para que “mande”, hay que conectarlo a un servicio (luego lo hacemos si te interesa).</p>
+    <div class="form">
+      <input type="text" placeholder="Nombre" />
+      <input type="email" placeholder="Email" />
+      <input type="text" placeholder="Asunto" />
+      <textarea placeholder="Mensaje"></textarea>
+      <a class="btn btn-primary" href="mailto:TUEMAIL@dominio.com?subject=JRS%20-%20Contacto">Enviar por email</a>
+      <div class="help">El botón abre tu cliente de correo con asunto prellenado.</div>
+    </div>
+  </section>
 </main>
 
 <footer>
-  <div class="wrap">© <span id="year"></span> Junior Research Seminar</div>
+  <div class="wrap">
+    <div>© <span id="year"></span> Junior Research Seminar</div>
+    <div class="small">Contacto directo funciona mejor que formularios sin backend.</div>
+  </div>
 </footer>
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
