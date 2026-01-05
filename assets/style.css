@@ -430,6 +430,13 @@ footer{
 .footer-inner a{ color: rgba(255,255,255,.92); }
 .footer-inner a:hover{ color: white; }
 
+/* --- Text highlights --- */
+.hl-blue{
+  color: var(--tec-blue);
+  font-weight: 1000;
+}
+
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce){
   .hero::before, .hero::after{ animation: none !important; }
