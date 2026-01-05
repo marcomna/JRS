@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Preparatoria · JRS</title>
+
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -11,7 +13,7 @@
   <div class="wrap">
     <div class="topbar">
       <div class="brand">
-        <div class="mark" aria-hidden="true"></div>
+        <img src="assets/logo-jrs.svg" alt="Logo JRS" style="width:40px;height:40px;" onerror="this.onerror=null;this.src='assets/logo-jrs.png';" />
         <div class="brandtext">
           <p class="title">Junior Research Seminar</p>
           <div class="sub">Preparatoria</div>
@@ -34,17 +36,19 @@
 </header>
 
 <main class="wrap">
-  <h1>Preparatoria</h1>
-  <p class="lead">Material mínimo para que la sesión tenga señal: pregunta, identificación, medición y próximos pasos.</p>
+  <section class="hero" style="padding:18px 18px;">
+    <h1 style="margin-top:0;">Preparatoria</h1>
+    <p class="lead">Checklist mínimo para que la sesión tenga señal: pregunta clara, estrategia defendible, medición cuidada y próximos pasos.</p>
+  </section>
 
   <div class="grid">
     <section class="card">
       <h2>Checklist para ponentes</h2>
       <ul>
         <li>Resumen 1 página: motivación, aporte, datos, identificación.</li>
-        <li>Draft PDF con páginas numeradas.</li>
-        <li>3 preguntas donde quieres feedback específico.</li>
-        <li>Slides opcionales (12–15 máx).</li>
+        <li>Draft PDF con páginas numeradas y figuras legibles.</li>
+        <li>3 preguntas concretas donde quieres feedback.</li>
+        <li>Slides opcionales (12–15 máximo).</li>
       </ul>
     </section>
 
@@ -53,18 +57,26 @@
       <ul>
         <li>3 fortalezas, 3 riesgos, 3 acciones (concretas).</li>
         <li>Identificación: supuestos y amenazas principales.</li>
-        <li>Medición: dónde está lo frágil y cómo probarlo.</li>
-        <li>Qué falta: una tabla/figura que cambie el paper.</li>
+        <li>Medición: lo frágil y cómo estresarlo.</li>
+        <li>Una tabla/figura que falta y que realmente cambie el paper.</li>
       </ul>
     </section>
   </div>
+
+  <section class="card" style="margin-top:14px;">
+    <h2>Plantilla rápida de feedback</h2>
+    <p class="small">
+      1) Contribución en 2 frases. 2) Amenaza principal a identificación. 3) Medición más frágil.
+      4) Qué resultado falta. 5) Próximo paso: una prueba/robustez específica.
+    </p>
+  </section>
 </main>
 
 <footer>
   <div class="wave" aria-hidden="true"></div>
   <div class="footer-inner">
     <div>© <span id="year"></span> JRS</div>
-    <div class="small">Esta sección se puede hacer más detallada luego.</div>
+    <div class="small">Guía viva, se ajusta con el tiempo.</div>
   </div>
 </footer>
 
