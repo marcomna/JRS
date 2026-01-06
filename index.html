@@ -64,7 +64,7 @@
     .hero-grid{
       margin-top: 18px;
       display:grid;
-      grid-template-columns: 1.6fr .9fr;
+      grid-template-columns: 1.55fr .95fr;
       gap: 18px;
       align-items: stretch;
     }
@@ -72,26 +72,15 @@
       .hero-grid{ grid-template-columns: 1fr; }
     }
 
-    .hero-title{
-      margin: 10px 0 0;
-      font-size: clamp(34px, 4.8vw, 58px);
-      letter-spacing: -0.02em;
-      line-height: 1.03;
-    }
-    .hero-sub{
-      margin: 10px 0 0;
-      font-size: 15px;
-      opacity: .80;
-      max-width: 60ch;
-    }
-
+    /* Dynamic line (más sutil) */
     .dynamic-line{
       display:inline-flex;
       align-items:baseline;
-      gap: 8px;
-      margin-top: 14px;
-      font-size: 15px;
-      opacity: .90;
+      gap: 10px;
+      margin-top: 12px;
+      font-size: 14px;
+      opacity: .92;
+      flex-wrap: wrap;
     }
     .dynamic-pill{
       display:inline-flex;
@@ -114,6 +103,7 @@
     }
     @keyframes blink { 50% { opacity: 0; } }
 
+    /* Panel logo */
     .logo-card{
       border-radius: 20px;
       border: 1px solid rgba(7,18,41,.08);
@@ -128,7 +118,7 @@
       text-align:center;
     }
     .logo-card img{
-      width: min(220px, 70%);
+      width: min(240px, 72%);
       height: auto;
       filter: drop-shadow(0 12px 26px rgba(0,0,0,.10));
     }
@@ -138,26 +128,7 @@
       margin: 0;
     }
 
-    .cta-row{
-      margin-top: 16px;
-      display:flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .cta-row a{
-      text-decoration:none;
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      padding: 12px 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(7,18,41,.10);
-      background: rgba(255,255,255,.78);
-      box-shadow: 0 12px 28px rgba(7,18,41,.08);
-      font-weight: 750;
-    }
-    .cta-row a:hover{ filter: brightness(.99); }
-
+    /* Stats */
     .stats-row{
       margin-top: 16px;
       display:grid;
@@ -184,6 +155,7 @@
       opacity: .78;
     }
 
+    /* Sección head */
     .section-head{
       margin-top: 18px;
       display:flex;
@@ -194,8 +166,6 @@
     }
     .section-head h2{ margin: 0; }
     .section-head p{ margin: 0; opacity: .75; }
-
-    .smallfix{ margin-top:12px; }
   </style>
 </head>
 
@@ -236,7 +206,7 @@
 </header>
 
 <main class="wrap">
-  <!-- HERO: minimal, más “poster”, con movimiento sutil -->
+  <!-- HERO: moderno, pero manteniendo TU redacción -->
   <section class="home-hero">
     <div class="hero-top">
       <div class="hero-badge">
@@ -247,25 +217,28 @@
 
     <div class="hero-grid">
       <div>
-        <h1 class="hero-title">Junior Research Seminar</h1>
-
         <div class="dynamic-line" aria-label="Línea dinámica">
           <span class="dynamic-pill">
             Semillero de <span class="dynamic-word" id="rotatingWord">ideas</span><span class="cursor" aria-hidden="true">|</span>
           </span>
-          <span style="opacity:.75;">para investigación, discusión y retroalimentación útil</span>
+          <span style="opacity:.75;">retroalimentación y discusión académica</span>
         </div>
 
-        <p class="hero-sub">
-          Un espacio para presentar trabajos concluidos o en proceso, con conversación académica clara y
-          retroalimentación que ayude a mejorar los proyectos. El seminario inició en febrero de 2025.
+        <!-- Mantener exactamente la redacción y el hl-blue -->
+        <h1>
+          Un espacio para presentar investigación y discutir temas <span class="hl-blue">económicos y sociales</span>, con retroalimentación útil.
+        </h1>
+
+        <p class="lead">
+          El Junior Research Seminar es una iniciativa de la Licenciatura en Economía del Campus Ciudad de México. Su objetivo es crear un espacio donde investigadorxs senior y junior —incluyendo alumnxs activxs— presenten trabajos de investigación concluidos o en proceso, con la intención de que cada sesión funcione como un semillero de ideas, retroalimentación y discusión académica. El seminario inició en febrero de 2025.
         </p>
 
-        <div class="cta-row">
-          <a href="calendario.html">Ver calendario</a>
-          <a href="archivo.html">Ver archivo</a>
-          <a href="normas.html">Ver normas</a>
-          <a href="preparatoria.html">JRS x PrepaTec</a>
+        <!-- Mantener los botones con tus clases/colores -->
+        <div class="actions actions-multi">
+          <a class="btn-solid c1" href="calendario.html">Calendario</a>
+          <a class="btn-solid c2" href="archivo.html">Archivo</a>
+          <a class="btn-solid c3" href="normas.html">Normas</a>
+          <a class="btn-solid c4" href="preparatoria.html">JRS x PrepaTec</a>
         </div>
 
         <div class="stats-row" aria-label="Indicadores del JRS">
@@ -283,8 +256,8 @@
           </div>
         </div>
 
-        <p class="small smallfix">
-          ¿Quieres presentar algo? En <a href="contacto.html">Contacto</a> está la plantilla mínima para hacerlo rápido.
+        <p class="small" style="margin-top:12px;">
+          ¿Quieres prsentar algo? En <a href="contacto.html">Contacto</a> está la plantilla mínima para hacerlo rápido.
         </p>
       </div>
 
@@ -309,30 +282,27 @@
     <section class="card">
       <h2>Qué pasa en una sesión</h2>
       <p>
-        En cada sesión, unx investigadorx senior (del Tecnológico de Monterrey o de una institución externa)
+        En cada sesión, unx investigadorx senior —del Tecnológico de Monterrey o de una institución externa—
         presenta un trabajo de investigación. Alternativamente, la presentación puede estar a cargo de
         <strong>unx alumnx activx</strong> de la Licenciatura en Economía o de otras áreas de las ciencias sociales.
       </p>
       <p>
         Las sesiones están abiertas a alumnxs de todos los semestres, quienes asisten para escuchar,
-        participar en la discusión y ofrecer retroalimentación. Se busca fomentar un diálogo interactivo,
-        abierto y productivo, con énfasis en mejorar los trabajos presentados.
+        participar en la discusión y ofrecer retroalimentación. Se busca fomentar un diálogo
+        interactivo, abierto y productivo, con énfasis en mejorar los trabajos presentados.
       </p>
       <p class="small">
-        Sugerencia práctica: si traes una pregunta concreta (sobre identificación, datos o narrativa), la sesión rinde el doble.
+        El formato y los tiempos de cada sesión se describen en <a href="normas.html">Normas</a>.
       </p>
     </section>
 
     <section class="card">
       <h2>Quién puede presentar</h2>
       <ul>
-        <li>Investigadorxs senior invitadxs.</li>
+        <li>Investigadorxs senior invitados.</li>
         <li>Investigadorxs junior: alumnxs activxs con proyectos en curso o concluidos.</li>
         <li>Trabajos teóricos, empíricos o metodológicos.</li>
       </ul>
-      <p class="small">
-        Para proponer sesión: revisa <a href="normas.html">Normas</a> y usa la plantilla de <a href="contacto.html">Contacto</a>.
-      </p>
     </section>
   </div>
 </main>
