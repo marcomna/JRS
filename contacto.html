@@ -14,11 +14,11 @@
     <div class="topbar">
       <div class="brand">
         <img
-  src="assets/logo-jrs.svg"
-  alt="Logo JRS"
-  class="logo-header"
-  onerror="this.onerror=null;this.src='assets/logo-jrs.png';"
-/>
+          src="assets/logo-jrs.svg"
+          alt="Logo JRS"
+          class="logo-header"
+          onerror="this.onerror=null;this.src='assets/logo-jrs.png';"
+        />
         <div class="brandtext">
           <p class="title">Junior Research Seminar</p>
           <div class="sub">Contacto</div>
@@ -46,29 +46,115 @@
     <p class="lead">Para proponer una sesión: manda un correo con el paquete mínimo. Menos ida y vuelta, más calendario.</p>
   </section>
 
+  <!-- Semblanzas (colapsables) -->
   <div class="grid">
     <section class="card">
-      <h2>Coordinación</h2>
-      <p><b>Nombre:</b> (tu nombre)</p>
-      <p><b>Email:</b> <a href="mailto:TUEMAIL@dominio.com">TUEMAIL@dominio.com</a></p>
-      <p class="small">Si quieres, luego dejamos un mailto con asunto prellenado.</p>
+      <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-nayeli">
+        <div class="bio-head">
+          <img src="assets/Foto Nayeli.png" alt="Foto de Nayeli Salgado Granados" class="bio-photo" loading="lazy" />
+          <div class="bio-meta">
+            <div class="bio-name">Nayeli Salgado Granados</div>
+            <div class="bio-role small">Directora del JRS</div>
+            <div class="bio-email small"><a href="mailto:nayeli.salgado@tec.mx">nayeli.salgado@tec.mx</a></div>
+          </div>
+        </div>
+        <div class="bio-hint small">Click para ver semblanza</div>
+      </button>
+
+      <div id="bio-nayeli" class="bio-panel" hidden>
+        <p>
+          Nayeli Salgado Granados es Profesora Asistente del Departamento de Economía del Tecnológico de Monterrey,
+          campus Ciudad de México. Es doctora en Economía por la Vienna University of Economics and Business (WU),
+          donde se desempeñó como Research and Teaching Associate en el Departamento de Socioeconomía.
+        </p>
+        <p>
+          Es economista por la Universidad Nacional Autónoma de México (UNAM) y cuenta con dos maestrías: una en
+          Economía del Desarrollo por la Universidad Carlos III de Madrid (UC3M) y otra en Desarrollo Económico y
+          Crecimiento por Lund University.
+        </p>
+        <p>
+          Antes de incorporarse al Tecnológico de Monterrey, fue Coordinadora Nacional de Política de Vivienda en la
+          Secretaría de Desarrollo Agrario, Territorial y Urbano (SEDATU), donde lideró la implementación de la nueva
+          agenda de vivienda adecuada, autoproducción de vivienda y atención a vivienda abandonada a nivel nacional.
+          Su experiencia profesional incluye el diseño, implementación y evaluación de políticas públicas, así como la
+          gestión de proyectos.
+        </p>
+        <p>
+          Ha colaborado en la División de Análisis de la Pobreza del CONEVAL, formando parte del equipo central que
+          diseñó e implementó la metodología oficial de medición multidimensional de la pobreza en México, así como
+          en el capítulo nacional de Transparencia Internacional.
+        </p>
+        <p>
+          Sus intereses de investigación se centran en historia económica, desarrollo económico y geografía económica.
+          Utiliza microdatos históricos y experimentos naturales para estudiar políticas agrícolas, inversiones en
+          infraestructura y mercados laborales, con el objetivo de entender cómo eventos históricos moldean patrones
+          de desarrollo de largo plazo.
+        </p>
+      </div>
     </section>
 
     <section class="card">
-      <h2>Plantilla mínima</h2>
-      <p class="small">Copia y pega:</p>
-      <div style="background: rgba(255,255,255,.78); border:1px solid rgba(7,18,41,.10); border-radius:16px; padding:12px 12px;">
-        <div style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 13px; color:#071229;">
-          Título:<br/>
-          Resumen (5–7 líneas):<br/>
-          Tipo de avance (paper/capítulo/nota):<br/>
-          Fecha tentativa:<br/>
-          Link al draft (si existe):<br/>
-          Discussant (si ya está definido):
+      <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-marco">
+        <div class="bio-head">
+          <img src="assets/Foto Marco.png" alt="Foto de Marco Méndez Atienza" class="bio-photo" loading="lazy" />
+          <div class="bio-meta">
+            <div class="bio-name">Marco Méndez Atienza</div>
+            <div class="bio-role small">Coordinador del JRS</div>
+            <div class="bio-email small"><a href="mailto:marco.mendez@tec.mx">marco.mendez@tec.mx</a></div>
+          </div>
         </div>
+        <div class="bio-hint small">Click para ver semblanza</div>
+      </button>
+
+      <div id="bio-marco" class="bio-panel" hidden>
+        <p>
+          Marco Méndez Atienza es Director de la Licenciatura en Economía en el Tecnológico de Monterrey, campus Ciudad
+          de México, y coordinador de la concentración en Economía Aplicada y Ciencia de Datos. Es doctorante en
+          Política Pública en el Tecnológico de Monterrey, maestro en Economía por El Colegio de México y licenciado en
+          Economía por el Tecnológico de Monterrey.
+        </p>
+        <p>
+          Su trabajo académico y profesional se concentra en economía aplicada, evaluación de políticas públicas,
+          crimen e infraestructura urbana, con énfasis en métodos de inferencia causal y análisis de datos. Ha realizado
+          consultoría económica en proyectos de transporte y caracterización sectorial, y fue consultor junior en
+          Consultores Internacionales, S.C., participando en análisis sectoriales, competitividad y mejora de modelos de
+          predicción macroeconómica.
+        </p>
+        <p>
+          Previamente, fue asesor en la Conferencia Nacional de Gobernadores (CONAGO), donde coordinó técnicamente
+          comisiones nacionales (desarrollo regional, desarrollo social, infraestructura, transparencia, salud, entre
+          otras) y participó en mesas interinstitucionales y procesos de toma de decisión a nivel federal.
+        </p>
+        <p>
+          Cuenta con experiencia en docencia (econometría y ciencia de datos), divulgación y comunicación pública, y ha
+          impulsado el Junior Research Seminar como un espacio de discusión académica abierto para investigadores senior
+          y junior, así como para estudiantes avanzados interesados en investigación.
+        </p>
       </div>
     </section>
   </div>
+
+  <!-- Propuesta -->
+  <section class="card" style="margin-top:14px;">
+    <h2>Proponer una sesión</h2>
+    <p class="small">Este formulario abre tu cliente de correo (sin backend) y envía a ambos correos.</p>
+
+    <form id="proposalForm" style="margin-top:10px;">
+      <div style="display:grid; gap:10px;">
+        <input type="text" id="nombre" placeholder="Tu nombre" required />
+        <input type="text" id="afiliacion" placeholder="Afiliación institucional" />
+        <input type="text" id="titulo" placeholder="Título del trabajo" required />
+        <textarea id="resumen" rows="6" placeholder="Resumen (5–7 líneas)" required></textarea>
+        <input type="text" id="fecha" placeholder="Fecha tentativa (opcional)" />
+        <input type="url" id="link" placeholder="Link al draft (si existe)" />
+        <input type="text" id="comentarios" placeholder="Comentarios (opcional)" />
+        <button type="submit">Abrir correo con propuesta</button>
+      </div>
+      <p class="small" style="margin-top:10px;">
+        Nota: si necesitas adjuntar el documento, hazlo manualmente en el correo que se abrirá.
+      </p>
+    </form>
+  </section>
 </main>
 
 <footer>
@@ -80,7 +166,94 @@
 </footer>
 
 <script>
+  // Footer year
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Collapsible bios
+  function setupBioToggles() {
+    const toggles = document.querySelectorAll(".bio-toggle");
+    toggles.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.getAttribute("aria-controls");
+        const panel = document.getElementById(id);
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!expanded));
+        panel.hidden = expanded;
+      });
+    });
+  }
+  setupBioToggles();
+
+  // Mailto proposal builder (no backend)
+  const TO = "nayeli.salgado@tec.mx,marco.mendez@tec.mx";
+
+  function esc(s) {
+    return encodeURIComponent((s || "").trim());
+  }
+
+  document.getElementById("proposalForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const afiliacion = document.getElementById("afiliacion").value;
+    const titulo = document.getElementById("titulo").value;
+    const resumen = document.getElementById("resumen").value;
+    const fecha = document.getElementById("fecha").value;
+    const link = document.getElementById("link").value;
+    const comentarios = document.getElementById("comentarios").value;
+
+    const subject = `[JRS] Propuesta de sesión: ${titulo || "Sin título"}`;
+
+    const bodyLines = [
+      "Propuesta de sesión (JRS)",
+      "",
+      `Nombre: ${nombre}`,
+      `Afiliación: ${afiliacion || "-"}`,
+      `Título del trabajo: ${titulo}`,
+      "",
+      "Resumen:",
+      resumen,
+      "",
+      `Fecha tentativa: ${fecha || "-"}`,
+      `Link al draft (si existe): ${link || "-"}`,
+      `Comentarios: ${comentarios || "-"}`,
+      "",
+      "Nota: Adjuntaré el documento en este correo (si aplica)."
+    ];
+
+    const mailto = `mailto:${TO}?subject=${esc(subject)}&body=${esc(bodyLines.join("\n"))}`;
+    window.location.href = mailto;
+  });
 </script>
+
+<style>
+  /* Estilos locales mínimos para el “card clickeable” sin tocar tu CSS global */
+  .bio-toggle{
+    width:100%;
+    text-align:left;
+    border:0;
+    padding:0;
+    background:transparent;
+    color:inherit;
+    cursor:pointer;
+  }
+  .bio-head{
+    display:flex;
+    gap:12px;
+    align-items:center;
+  }
+  .bio-photo{
+    width:58px;
+    height:58px;
+    border-radius:14px;
+    object-fit:cover;
+    border:1px solid rgba(7,18,41,.10);
+    background: rgba(255,255,255,.6);
+  }
+  .bio-meta{ line-height:1.2; }
+  .bio-name{ font-weight:700; }
+  .bio-panel{ margin-top:10px; }
+  .bio-hint{ margin-top:10px; opacity:.85; }
+</style>
 </body>
 </html>
