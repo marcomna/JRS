@@ -41,25 +41,34 @@
 </header>
 
 <main class="wrap">
+  <!-- HERO -->
   <section class="hero" style="padding:18px 18px;">
     <h1 style="margin-top:0;">Calendario</h1>
-    <p class="lead">Sesiones vigentes. Para ediciones anteriores, ver <a href="archivo.html">Archivo histórico</a>.</p>
+    <p class="lead">
+      Sesiones vigentes. Para ediciones anteriores, ver
+      <a href="archivo.html">Archivo histórico</a>.
+    </p>
+  </section>
 
-    <!-- Liga Teams (visible y clara) -->
-    <p style="margin:10px 0 0; font-size:18px; font-weight:700;">
-      Liga Teams:
+  <!-- LIGA TEAMS (CLICKABLE, FUERA DEL HERO) -->
+  <section class="card" style="margin-top:14px; text-align:center;">
+    <p style="margin:0; font-size:18px; font-weight:700;">
+      Sesiones vía Microsoft Teams
+    </p>
+    <p style="margin:8px 0 0;">
       <a
         href="https://teams.microsoft.com/meet/28726193316254?p=YRlkV1yXbOLbW75jG3"
         target="_blank"
         rel="noopener"
-        style="font-weight:800;"
+        style="font-size:17px; font-weight:800; text-decoration:underline; pointer-events:auto;"
       >
-        Unirse a la sesión
+        Unirse a la reunión
       </a>
     </p>
   </section>
 
-  <div class="table-wrap">
+  <!-- TABLA DE CALENDARIO -->
+  <div class="table-wrap" style="margin-top:14px;">
     <table>
       <thead>
         <tr>
@@ -82,14 +91,20 @@
     </table>
   </div>
 
+  <!-- CARDS INFORMATIVAS -->
   <div class="grid">
     <section class="card">
       <h2>Proponer una sesión</h2>
-      <p>Revisa <a href="normas.html">Normas</a> y usa la plantilla mínima de <a href="contacto.html">Contacto</a>.</p>
+      <p>
+        Revisa <a href="normas.html">Normas</a> y usa la plantilla mínima de
+        <a href="contacto.html">Contacto</a>.
+      </p>
     </section>
     <section class="card">
       <h2>Materiales</h2>
-      <p>Ideal: draft PDF 48–72 horas antes. Si hay versión nueva, avisa qué cambió.</p>
+      <p>
+        Ideal: draft PDF 48–72 horas antes. Si hay versión nueva, avisa qué cambió.
+      </p>
     </section>
   </div>
 </main>
@@ -98,7 +113,6 @@
   <div class="wave" aria-hidden="true"></div>
   <div class="footer-inner">
     <div>© <span id="year"></span> JRS</div>
-    <div class="small">Edita esta tabla directamente en el HTML.</div>
   </div>
 </footer>
 
