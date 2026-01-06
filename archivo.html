@@ -7,6 +7,49 @@
 
   <link rel="icon" href="assets/favicon.png" type="image/png" />
   <link rel="stylesheet" href="assets/style.css" />
+
+  <style>
+    /* Controles de búsqueda (minimal, sin tocar tu CSS global) */
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: end;
+      margin-top: 10px;
+    }
+    .filters .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 180px;
+    }
+    .filters label {
+      font-size: 12px;
+      opacity: .85;
+    }
+    .filters input[type="text"],
+    .filters input[type="date"]{
+      padding: 10px 12px;
+      border: 1px solid rgba(0,0,0,.15);
+      border-radius: 10px;
+      font-size: 14px;
+      background: #fff;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .filters .btn {
+      padding: 10px 12px;
+      border: 1px solid rgba(0,0,0,.15);
+      border-radius: 10px;
+      background: #fff;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .filters .btn:hover { filter: brightness(0.98); }
+    .filters .smallhint { font-size: 12px; opacity: .75; margin: 6px 0 0; }
+    .muted { opacity: .75; }
+    .hidden-row { display: none; }
+  </style>
 </head>
 <body>
 <header>
@@ -60,8 +103,32 @@
   <section class="card" style="margin-top:14px;">
     <h2>Edición 2025 · Febrero–Junio</h2>
 
-    <div class="table-wrap" style="margin-top:10px;">
-      <table>
+    <!-- Buscador / filtros -->
+    <div class="filters" aria-label="Filtros de búsqueda">
+      <div class="field" style="flex: 2 1 280px;">
+        <label for="q">Buscar (ponente o tema)</label>
+        <input id="q" type="text" placeholder="Ej. UNAM, pobreza, Utopías, BIS..." autocomplete="off" />
+        <div class="smallhint">Tip: busca por institución, apellido o palabra clave.</div>
+      </div>
+
+      <div class="field">
+        <label for="fromDate">Desde</label>
+        <input id="fromDate" type="date" />
+      </div>
+
+      <div class="field">
+        <label for="toDate">Hasta</label>
+        <input id="toDate" type="date" />
+      </div>
+
+      <div class="field" style="min-width:140px;">
+        <button class="btn" id="clearBtn" type="button">Limpiar</button>
+        <div class="smallhint muted" id="countHint"></div>
+      </div>
+    </div>
+
+    <div class="table-wrap" style="margin-top:12px;">
+      <table id="archivoTable">
         <thead>
           <tr>
             <th>Fecha</th>
@@ -96,10 +163,11 @@
           <tr>
             <td>21-may-2025</td>
             <td>Mtro. Marco Méndez Atienza, ITESM</td>
-            <td><a href="materiales/210525_MMA.pdf" target="_blank" rel="noopener">
-  Sí al desarme, sí a la paz: Measuring the Impact of Mexico City's Gun Buyback Initiative
-</a>
-</td>
+            <td>
+              <a href="materiales/210525_MMA.pdf" target="_blank" rel="noopener">
+                Sí al desarme, sí a la paz: Measuring the Impact of Mexico City's Gun Buyback Initiative
+              </a>
+            </td>
           </tr>
           <tr>
             <td>21-may-2025</td>
@@ -220,12 +288,102 @@
   <div class="wave" aria-hidden="true"></div>
   <div class="footer-inner">
     <div>© <span id="year"></span> JRS</div>
-    <div class="small"></div>
+    <div class="small">Orden mata caos.</div>
   </div>
 </footer>
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  // --- Filtro de tabla (texto + rango de fechas) ---
+  (function(){
+    const table = document.getElementById("archivoTable");
+    const tbody = table.querySelector("tbody");
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+
+    const q = document.getElementById("q");
+    const fromDate = document.getElementById("fromDate");
+    const toDate = document.getElementById("toDate");
+    const clearBtn = document.getElementById("clearBtn");
+    const countHint = document.getElementById("countHint");
+
+    const monthMap = {
+      ene: 0, feb: 1, mar: 2, abr: 3, may: 4, jun: 5,
+      jul: 6, ago: 7, sep: 8, oct: 9, nov: 10, dic: 11
+    };
+
+    function parseFechaCell(text){
+      // Espera "dd-mmm-aaaa" (ej. 04-jun-2025)
+      const s = (text || "").trim().toLowerCase();
+      const m = s.match(/^(\d{1,2})-([a-zñ]{3})-(\d{4})$/);
+      if (!m) return null;
+      const day = parseInt(m[1], 10);
+      const mon = monthMap[m[2]];
+      const year = parseInt(m[3], 10);
+      if (mon === undefined) return null;
+      // Fecha a mediodía para evitar rollovers por timezone
+      return new Date(year, mon, day, 12, 0, 0, 0);
+    }
+
+    // Guardamos fecha parseada y texto “buscable” por fila
+    const rowMeta = rows.map(r => {
+      const cells = r.querySelectorAll("td");
+      const fechaText = cells[0]?.innerText || "";
+      const ponenteText = cells[1]?.innerText || "";
+      const temaText = cells[2]?.innerText || "";
+      return {
+        row: r,
+        fecha: parseFechaCell(fechaText),
+        hayFecha: !!parseFechaCell(fechaText),
+        hayContenido: (ponenteText + " " + temaText).toLowerCase()
+      };
+    });
+
+    function applyFilters(){
+      const needle = (q.value || "").trim().toLowerCase();
+
+      const fromVal = fromDate.value ? new Date(fromDate.value + "T12:00:00") : null;
+      const toVal = toDate.value ? new Date(toDate.value + "T12:00:00") : null;
+
+      let shown = 0;
+
+      rowMeta.forEach(m => {
+        let ok = true;
+
+        // Texto
+        if (needle) {
+          ok = ok && m.hayContenido.includes(needle);
+        }
+
+        // Fechas (si no parsea la fecha, no la ocultamos por rango)
+        if (ok && (fromVal || toVal) && m.fecha) {
+          if (fromVal && m.fecha < fromVal) ok = false;
+          if (toVal && m.fecha > toVal) ok = false;
+        }
+
+        m.row.classList.toggle("hidden-row", !ok);
+        if (ok) shown++;
+      });
+
+      countHint.textContent = `${shown} de ${rows.length} filas`;
+    }
+
+    function clearAll(){
+      q.value = "";
+      fromDate.value = "";
+      toDate.value = "";
+      applyFilters();
+      q.focus();
+    }
+
+    q.addEventListener("input", applyFilters);
+    fromDate.addEventListener("change", applyFilters);
+    toDate.addEventListener("change", applyFilters);
+    clearBtn.addEventListener("click", clearAll);
+
+    // Estado inicial
+    applyFilters();
+  })();
 </script>
 </body>
 </html>
