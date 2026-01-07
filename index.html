@@ -143,10 +143,13 @@
     .stats-row{
       margin-top: 0;
       display:grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 10px;
     }
-    @media (max-width: 700px){
+    @media (max-width: 900px){
+      .stats-row{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 520px){
       .stats-row{ grid-template-columns: 1fr; }
     }
     .statbox{
@@ -263,16 +266,20 @@
 
       <div class="stats-row" aria-label="Indicadores del JRS">
         <div class="statbox">
-          <div class="num" id="monthsSince">0</div>
-          <div class="label">meses desde el arranque</div>
-        </div>
-        <div class="statbox">
           <div class="num" id="daysSince">0</div>
           <div class="label">días construyendo comunidad</div>
         </div>
         <div class="statbox">
           <div class="num">23</div>
           <div class="label">sesiones del JRS</div>
+        </div>
+        <div class="statbox">
+          <div class="num">33</div>
+          <div class="label">investigadorxs junior (alumnxs activxs)</div>
+        </div>
+        <div class="statbox">
+          <div class="num">19</div>
+          <div class="label">investigadorxs senior</div>
         </div>
       </div>
 
@@ -334,14 +341,12 @@
     rotating.textContent = words[wi];
   }, 900);
 
-  // Counters since Feb 2025
+  // Counters since Feb 2025 (only days shown in stats)
   const start = new Date("2025-02-01T00:00:00");
   const now = new Date();
   const ms = now - start;
   const days = Math.floor(ms / (1000 * 60 * 60 * 24));
-  const months = (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
 
-  document.getElementById("monthsSince").textContent = Math.max(0, months);
   document.getElementById("daysSince").textContent = Math.max(0, days);
 
   document.getElementById("year").textContent = new Date().getFullYear();
