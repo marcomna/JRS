@@ -36,9 +36,6 @@
       <a href="preparatoria.html">JRS x PrepaTec</a>
       <a href="normas.html">Normas</a>
       <a class="active" href="contacto.html">Contacto</a>
-      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">
-    <span class="theme-icon" aria-hidden="true">☾</span>
-  </button>
     </nav>
   </div>
 </header>
@@ -130,7 +127,7 @@
         </p>
         <p>
           Cuenta con experiencia en docencia (econometría y ciencia de datos), divulgación y comunicación pública, y ha
-          impulsado espacios de discusión académica abiertos para investigadores senior y junior, así como para 
+          impulsado espacios de discusión académica abiertos para investigadores senior y junior, así como para
           estudiantes avanzados interesados en investigación.
         </p>
       </div>
@@ -306,7 +303,7 @@
   }
 
   #proposalForm input,
-  #proposalForm textarea {
+  #proposalForm textarea{
     font-family: inherit;
     font-size: 14px;
     padding: 12px 14px;
@@ -317,25 +314,25 @@
     transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
   }
 
-  #proposalForm textarea {
+  #proposalForm textarea{
     resize: vertical;
     min-height: 130px;
   }
 
   #proposalForm input::placeholder,
-  #proposalForm textarea::placeholder {
+  #proposalForm textarea::placeholder{
     color: rgba(7,18,41,.45);
   }
 
   #proposalForm input:focus,
-  #proposalForm textarea:focus {
+  #proposalForm textarea:focus{
     outline: none;
     border-color: rgba(7,18,41,.45);
     background: #fff;
     box-shadow: 0 0 0 3px rgba(7,18,41,.08);
   }
 
-  #proposalForm button {
+  #proposalForm button{
     margin-top: 6px;
     padding: 12px 16px;
     border-radius: 16px;
@@ -347,29 +344,24 @@
     transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
   }
 
-  #proposalForm button:hover {
+  #proposalForm button:hover{
     background: #0b1f4a;
     box-shadow: 0 6px 18px rgba(7,18,41,.18);
     transform: translateY(-1px);
   }
 
-  #proposalForm button:active {
+  #proposalForm button:active{
     transform: translateY(0);
     box-shadow: 0 3px 10px rgba(7,18,41,.18);
   }
 
-  /* Small improvement: make fields feel less cramped on wide screens */
   @media (min-width: 900px){
     .proposal-grid{
       grid-template-columns: 1fr 1fr;
       align-items: start;
     }
-    #titulo, #resumen{
-      grid-column: 1 / -1;
-    }
-    #comentarios{
-      grid-column: 1 / -1;
-    }
+    #titulo, #resumen{ grid-column: 1 / -1; }
+    #comentarios{ grid-column: 1 / -1; }
     #proposalForm button{
       grid-column: 1 / -1;
       justify-self: start;
