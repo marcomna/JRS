@@ -510,3 +510,74 @@ footer{
   object-fit: contain;
   opacity: 0.95;
 }
+
+/* ===== Theme variables ===== */
+:root{
+  color-scheme: light;
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: rgba(0,0,0,.75);
+  --border: rgba(0,0,0,.15);
+  --card: #ffffff;
+  --soft: rgba(255,255,255,.55);
+}
+
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg: #0f1115;
+  --text: #e8e8e8;
+  --muted: rgba(232,232,232,.75);
+  --border: rgba(232,232,232,.18);
+  --card: rgba(255,255,255,.04);
+  --soft: rgba(255,255,255,.08);
+}
+
+/* Aplica variables a lo básico (sin tocar tu CSS global) */
+body{ background: var(--bg); color: var(--text); }
+.muted{ opacity: 1; color: var(--muted); }
+
+/* Inputs de filtros en ambos modos (tú ahora los fuerzas a blanco) */
+.filters input[type="text"],
+.filters input[type="date"]{
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+}
+.filters .btn{
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+}
+
+/* Chev en ambos modos */
+.chev{
+  border: 1px solid rgba(7,18,41,.10);
+  background: var(--soft);
+}
+
+/* ===== Navbar: alinea el toggle a la derecha ===== */
+header nav{
+  display: flex;
+  align-items: center;
+  gap: 14px;         /* ajusta si quieres */
+  flex-wrap: wrap;   /* por si se rompe en móvil */
+}
+
+header nav .theme-toggle{
+  margin-left: auto; /* empuja a la derecha */
+}
+
+/* Botón discreto */
+.theme-toggle{
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 6px 10px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: .85;
+}
+.theme-toggle:hover{ opacity: 1; }
+.theme-toggle:focus{ outline: 2px solid var(--border); outline-offset: 2px; }
+.theme-icon{ font-size: 14px; }
