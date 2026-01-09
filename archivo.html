@@ -824,6 +824,33 @@
 
     applyFilters();
   })();
+    // --- Theme toggle (light/dark) + persistencia ---
+  (function () {
+    const root = document.documentElement;
+    const btn = document.getElementById("themeToggle");
+    if (!btn) return;
+
+    const saved = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initial = saved || (prefersDark ? "dark" : "light");
+
+    function setTheme(t){
+      if (t === "dark") root.setAttribute("data-theme", "dark");
+      else root.removeAttribute("data-theme");
+
+      localStorage.setItem("theme", t);
+
+      const icon = btn.querySelector(".theme-icon");
+      if (icon) icon.textContent = (t === "dark") ? "☀" : "☾";
+    }
+
+    setTheme(initial);
+
+    btn.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      setTheme(current === "dark" ? "light" : "dark");
+    });
+  })();
 </script>
 </body>
 </html>
