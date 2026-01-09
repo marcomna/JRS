@@ -10,47 +10,45 @@
 
   <style>
     /* Controles de búsqueda (minimal, sin tocar tu CSS global) */
-    .filters{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      align-items:end;
-      margin-top:10px;
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: end;
+      margin-top: 10px;
     }
-    .filters .field{
-      display:flex;
-      flex-direction:column;
-      gap:6px;
-      min-width:180px;
+    .filters .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 180px;
     }
-    .filters label{
-      font-size:12px;
-      opacity:.85;
+    .filters label {
+      font-size: 12px;
+      opacity: .85;
     }
     .filters input[type="text"],
     .filters input[type="date"]{
-      padding:10px 12px;
-      border:1px solid var(--line);
-      border-radius:10px;
-      font-size:14px;
-      background: rgba(255,255,255,.88);
-      color: var(--ink);
-      width:100%;
-      box-sizing:border-box;
+      padding: 10px 12px;
+      border: 1px solid rgba(0,0,0,.15);
+      border-radius: 10px;
+      font-size: 14px;
+      background: #fff;
+      width: 100%;
+      box-sizing: border-box;
     }
-    .filters .btn{
-      padding:10px 12px;
-      border:1px solid var(--line);
-      border-radius:10px;
-      background: rgba(255,255,255,.88);
-      color: var(--ink);
-      cursor:pointer;
-      font-size:14px;
+    .filters .btn {
+      padding: 10px 12px;
+      border: 1px solid rgba(0,0,0,.15);
+      border-radius: 10px;
+      background: #fff;
+      cursor: pointer;
+      font-size: 14px;
     }
-    .filters .btn:hover{ filter: brightness(0.98); }
-    .filters .smallhint{ font-size:12px; opacity:.75; margin:6px 0 0; }
-    .muted{ opacity:.75; }
-    .hidden-row{ display:none; }
+    .filters .btn:hover { filter: brightness(0.98); }
+    .filters .smallhint { font-size: 12px; opacity: .75; margin: 6px 0 0; }
+    .muted { opacity: .75; }
+    .hidden-row { display: none; }
 
     /* Cards colapsables (sin tocar tu CSS global) */
     .collapse-toggle{
@@ -74,7 +72,7 @@
       border-radius:12px;
       display:grid;
       place-items:center;
-      border:1px solid var(--line);
+      border:1px solid rgba(7,18,41,.10);
       background: rgba(255,255,255,.55);
       transition: transform .18s ease, filter .18s ease;
       flex: 0 0 auto;
@@ -85,24 +83,25 @@
 
     /* === Animación del cuerpo colapsable (evita "de sopetón") === */
     .collapse-body{
-      margin-top:10px;
+      margin-top: 10px;
 
-      max-height:0;
-      overflow:hidden;
-      opacity:0;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
       transform: translateY(-4px);
 
       transition: max-height .35s ease, opacity .25s ease, transform .25s ease;
       will-change: max-height, opacity, transform;
     }
     .collapse-body.is-open{
-      max-height:5000px; /* suficiente para tabla + filtros */
-      opacity:1;
+      max-height: 5000px; /* suficiente para tabla + filtros */
+      opacity: 1;
       transform: translateY(0);
     }
+
+    /* Respeta tu helper de "hidden-row" para filtros */
   </style>
 </head>
-
 <body>
 <header>
   <div class="wrap">
@@ -414,7 +413,206 @@
             </tr>
           </thead>
           <tbody>
-            <!-- (Tu tabla Feb–Jun va aquí, igual que la tienes) -->
+
+            <tr>
+              <td>04-jun-2025</td>
+              <td>Dr. Alfonso Rivera Illingworth, ITESM</td>
+              <td>Knowledge Divides in the Era of Big Data: Using Wikipedia Data to Identify and Measure Divides across Countries and Languages</td>
+            </tr>
+            <tr>
+              <td>04-jun-2025</td>
+              <td>Juan Carlos Ambrosio Montoya, LEC CCM</td>
+              <td>
+                <a href="materiales/040625_JCAM.pdf" target="_blank" rel="noopener">
+                  Análisis de los Vehículos Eléctricos en México
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>28-may-2025</td>
+              <td>Dra. Patricia López Rodríguez, ITESM</td>
+              <td>
+                <a href="materiales/280525_PLR.pdf" target="_blank" rel="noopener">
+                  The Effect of Social Capital on Environment Caring
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>28-may-2025</td>
+              <td>Braulio Jahel Ramírez Cabrera, LEC-LTP CCM</td>
+              <td>De la migración a la modernización: cómo los extranjeros impulsan la innovación y el desarrollo económico agrícola</td>
+            </tr>
+
+            <tr>
+              <td>21-may-2025</td>
+              <td>Mtro. Marco Méndez Atienza, ITESM</td>
+              <td>
+                <a href="materiales/210525_MMA.pdf" target="_blank" rel="noopener">
+                  Sí al desarme, sí a la paz: Measuring the Impact of Mexico City's Gun Buyback Initiative
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>21-may-2025</td>
+              <td>Luis Chávez López, LEC-LRI CCM</td>
+              <td>
+                <a href="materiales/210525_LCL.pdf" target="_blank" rel="noopener">
+                  Análisis estratégico: Más allá de una simple falta
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>14-may-2025</td>
+              <td>Diego Ceciliano Díaz, LEC-LTP CCM<br>José Sánchez, LED-LRI CCM</td>
+              <td>
+                <a href="materiales/140525_DCD.pdf" target="_blank" rel="noopener">
+                  Crisis hídrica y su impacto en la producción agrícola de la costa de Hermosillo
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>14-may-2025</td>
+              <td>
+                Sergio Alejandro Iglesias Ramírez, LEC-LTP CSF<br>
+                Nadia Alexandra Lozano Marchán, LEC-LRI CSF<br>
+                Valentina Muhlia Gutiérrez, LEC-LRI CSF<br>
+                José Ilyan Valdivia Rivera, LRI-LTP CSF
+              </td>
+              <td>Hijos del maíz: cultural resilience and community responses to food insecurity</td>
+            </tr>
+
+            <tr>
+              <td>23-abr-2025</td>
+              <td>Dr. Carlos Madeira, BIS</td>
+              <td>
+                <a href="materiales/230425_BIS.pdf" target="_blank" rel="noopener">
+                  Macroeconomic impact of extreme weather events
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>23-abr-2025</td>
+              <td>Alberto Genaro Gómez Castro, LEC CCM<br>Fidel Maldonado Luna, LEC CCM</td>
+              <td>
+                <a href="materiales/230425_FML.pdf" target="_blank" rel="noopener">
+                  Efectos de la movilidad social y la ubicación de incrementos en el costo de vivienda
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>09-abr-2025</td>
+              <td>Mtro. Jesús Paredes Romero, Coneval</td>
+              <td>
+                <a href="materiales/090425_JPR.pdf" target="_blank" rel="noopener">
+                  La pobreza en las metrópolis: un esfuerzo multidisciplinario
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>09-abr-2025</td>
+              <td>Priscilla Tong Tse Zhao, LED-LEC CCM</td>
+              <td>
+                <a href="materiales/090425_PTTZ.pdf" target="_blank" rel="noopener">
+                  De la pantalla grande a la patria: películas, política e identidad estadounidense
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>02-abr-2025</td>
+              <td>Dr. Adrián Escamilla Trejo, UNAM</td>
+              <td>
+                <a href="materiales/020425_AET.pdf" target="_blank" rel="noopener">
+                  Cadenas Globales de Valor. Retos y oportunidades de inserción de las Pymes del sector metalmecánico en México
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>02-abr-2025</td>
+              <td>Karlo André Romero Hernández, LEC CCM</td>
+              <td>
+                <a href="materiales/020425_KARH.pdf" target="_blank" rel="noopener">
+                  Tecno-feudalismo: Corporativismos tecnológicos coloniales.
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>26-mar-2025</td>
+              <td>
+                Dr. Roberto Valencia Arriaga, UNAM<br>
+                Héctor Damián Castillo González, LEC-LTP CCM (Comentador)<br>
+                Sara Navarro Guevara, LEC CCM (Comentadora)
+              </td>
+              <td>
+                <a href="materiales/260325_RVA.pdf" target="_blank" rel="noopener">
+                  Presentación del libro: ¿Por qué es ineficiente la política monetaria en México? Una explicación kaleckiana.
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>12-mar-2025</td>
+              <td>
+                Dr. Sergio A. Bárcena Juárez, Buró Parlamentario<br>
+                Lic. Óscar Medina Llanos, Buró Parlamentario<br>
+                Paula Reinah Aponte, LRI-LTP CCM<br>
+                Luis Nemecio Aguirre Flores, LEC-LTP CCM
+              </td>
+              <td>
+                <a href="materiales/120325_LNAF.pdf" target="_blank" rel="noopener">
+                  Fuerza Política de las Legisladoras en los Congresos Locales de México
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>05-mar-2025</td>
+              <td>Dra. Isabel Osorio-Caballero, UNAM</td>
+              <td>
+                <a href="materiales/050325_IOC.pdf" target="_blank" rel="noopener">
+                  Brecha digital, desigualdades económicas y sociales en Méxic
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>05-mar-2025</td>
+              <td>Andrés Felipe Gutiérrez Jaramillo, LEC-LRI CCM</td>
+              <td>
+                <a href="materiales/050325_AFGJ.pdf" target="_blank" rel="noopener">
+                  El efecto de las Utopías sobre la incidencia delictiva en Iztapalapa
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>26-feb-2025</td>
+              <td>Dr. Miguel Ángel Mascarúa, Banco de México</td>
+              <td>
+                <a href="materiales/260225_MAM.pdf" target="_blank" rel="noopener">
+                  Imperfect Law Enforcement, Informality, and Organized Crime
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>26-feb-2025</td>
+              <td>Alexa Contreras Contreras, LEC-LRI CCM</td>
+              <td>
+                <a href="materiales/260225_ACC.pdf" target="_blank" rel="noopener">
+                  Cerrando la Brecha Habitacional: Inteligencia de Datos para Mujeres Jefas de Hogar y Acceso al Financiamiento
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>19-feb-2025</td>
+              <td>Sesión de Arranque</td>
+              <td>—</td>
+            </tr>
+
           </tbody>
         </table>
       </div>
@@ -444,6 +642,7 @@
       const panel = document.getElementById(id);
       if (!panel) return;
 
+      // Estado inicial (sin "hidden": usamos clase)
       const expanded = btn.getAttribute("aria-expanded") === "true";
       panel.classList.toggle("is-open", expanded);
       panel.setAttribute("aria-hidden", String(!expanded));
@@ -472,9 +671,13 @@
     const clearBtn = document.getElementById("clearBtn");
     const countHint = document.getElementById("countHint");
 
-    const monthMap = { ene:0, feb:1, mar:2, abr:3, may:4, jun:5, jul:6, ago:7, sep:8, oct:9, nov:10, dic:11 };
+    const monthMap = {
+      ene: 0, feb: 1, mar: 2, abr: 3, may: 4, jun: 5,
+      jul: 6, ago: 7, sep: 8, oct: 9, nov: 10, dic: 11
+    };
 
     function parseFechaCell(text){
+      // Espera "dd-mmm-aaaa" (ej. 04-jun-2025)
       const s = (text || "").trim().toLowerCase();
       const m = s.match(/^(\d{1,2})-([a-zñ]{3})-(\d{4})$/);
       if (!m) return null;
@@ -490,7 +693,11 @@
       const fechaText = cells[0]?.innerText || "";
       const ponenteText = cells[1]?.innerText || "";
       const temaText = cells[2]?.innerText || "";
-      return { row: r, fecha: parseFechaCell(fechaText), hayContenido: (ponenteText + " " + temaText).toLowerCase() };
+      return {
+        row: r,
+        fecha: parseFechaCell(fechaText),
+        hayContenido: (ponenteText + " " + temaText).toLowerCase()
+      };
     });
 
     function applyFilters(){
@@ -547,7 +754,10 @@
     const clearBtn = document.getElementById("clearBtn2");
     const countHint = document.getElementById("countHint2");
 
-    const monthMap = { ene:0, feb:1, mar:2, abr:3, may:4, jun:5, jul:6, ago:7, sep:8, oct:9, nov:10, dic:11 };
+    const monthMap = {
+      ene: 0, feb: 1, mar: 2, abr: 3, may: 4, jun: 5,
+      jul: 6, ago: 7, sep: 8, oct: 9, nov: 10, dic: 11
+    };
 
     function parseFechaCell(text){
       const s = (text || "").trim().toLowerCase();
@@ -565,7 +775,11 @@
       const fechaText = cells[0]?.innerText || "";
       const ponenteText = cells[1]?.innerText || "";
       const temaText = cells[2]?.innerText || "";
-      return { row: r, fecha: parseFechaCell(fechaText), hayContenido: (ponenteText + " " + temaText).toLowerCase() };
+      return {
+        row: r,
+        fecha: parseFechaCell(fechaText),
+        hayContenido: (ponenteText + " " + temaText).toLowerCase()
+      };
     });
 
     function applyFilters(){
