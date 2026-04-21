@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="assets/style.css" />
 
   <style>
-    /* ===== HOME HERO (solo en esta página; no toca tu CSS global) ===== */
     .home-hero{
       margin-top: 14px;
       position: relative;
@@ -55,7 +54,6 @@
       box-shadow: 0 0 0 3px rgba(0,164,153,.14);
     }
 
-    /* Fila superior: texto + logo */
     .hero-top-grid{
       display:grid;
       grid-template-columns: 1.6fr .9fr;
@@ -66,7 +64,6 @@
       .hero-top-grid{ grid-template-columns: 1fr; }
     }
 
-    /* Dynamic line */
     .dynamic-line{
       display:inline-flex;
       align-items:baseline;
@@ -98,7 +95,6 @@
     }
     @keyframes blink { 50% { opacity: 0; } }
 
-    /* Logo card */
     .logo-card{
       border-radius: 24px;
       border: 1px solid rgba(7,18,41,.08);
@@ -116,10 +112,8 @@
       filter: drop-shadow(0 20px 44px rgba(0,0,0,.18));
     }
 
-    /* Fila inferior: full width */
     .hero-bottom{ margin-top: 22px; }
 
-    /* Botones a TODO el ancho (manteniendo tus clases/colores c1–c4) */
     .actions.actions-multi{
       display:grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -139,7 +133,6 @@
       .actions.actions-multi{ grid-template-columns: 1fr; }
     }
 
-    /* Stats (full width) */
     .stats-row{
       margin-top: 0;
       display:grid;
@@ -169,7 +162,6 @@
       opacity: .78;
     }
 
-    /* Sección head */
     .section-head{
       margin-top: 18px;
       display:flex;
@@ -180,6 +172,135 @@
     }
     .section-head h2{ margin: 0; }
     .section-head p{ margin: 0; opacity: .75; }
+
+    /* ===== PRÓXIMA SESIÓN ===== */
+    .proxima-sesion{
+      margin-top: 12px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(0,51,160,.18);
+      background: linear-gradient(135deg, rgba(0,51,160,.04) 0%, rgba(0,164,153,.05) 100%);
+      box-shadow: 0 8px 32px rgba(0,51,160,.08);
+    }
+    .ps-header{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 20px 12px;
+      border-bottom: 1px solid rgba(0,51,160,.10);
+      flex-wrap: wrap;
+    }
+    .ps-badge{
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: #0033A0;
+      color: #fff;
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+    .ps-badge .dot-white{
+      width: 6px; height: 6px; border-radius: 99px;
+      background: #00A499;
+      box-shadow: 0 0 0 2px rgba(0,164,153,.4);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100%{ box-shadow: 0 0 0 2px rgba(0,164,153,.4); }
+      50%{ box-shadow: 0 0 0 5px rgba(0,164,153,.15); }
+    }
+    .ps-meta{
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      font-weight: 700;
+      color: #071229;
+      opacity: .80;
+    }
+    .ps-meta span{ display: flex; align-items: center; gap: 5px; }
+
+    .ps-body{
+      padding: 16px 20px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media(max-width: 680px){ .ps-body{ grid-template-columns: 1fr; } }
+
+    .ps-slot{
+      border-radius: 14px;
+      padding: 14px 16px;
+      border: 1px solid rgba(7,18,41,.08);
+      background: rgba(255,255,255,.82);
+    }
+    .ps-slot-label{
+      font-size: 10.5px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 9px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .ps-slot-label.senior{ color: #0033A0; }
+    .ps-slot-label.junior{ color: #007A72; }
+    .pip{ width: 7px; height: 7px; border-radius: 99px; flex-shrink: 0; }
+    .pip.senior{ background: #0033A0; }
+    .pip.junior{ background: #00A499; }
+
+    .ps-presenter{
+      font-size: 14.5px;
+      font-weight: 800;
+      color: #071229;
+      line-height: 1.35;
+      margin-bottom: 2px;
+    }
+    .ps-affil{
+      font-size: 12px;
+      opacity: .60;
+      margin-bottom: 9px;
+      font-weight: 600;
+    }
+    .ps-title{
+      font-size: 13px;
+      font-style: italic;
+      color: #071229;
+      opacity: .80;
+      line-height: 1.45;
+      padding-top: 9px;
+      border-top: 1px solid rgba(7,18,41,.07);
+    }
+
+    .ps-footer{
+      padding: 12px 20px 14px;
+      border-top: 1px solid rgba(0,51,160,.08);
+      background: rgba(0,51,160,.03);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .ps-teams-label{
+      font-size: 12px;
+      font-weight: 700;
+      opacity: .65;
+      flex-shrink: 0;
+    }
+    .ps-teams-info{
+      font-size: 12px;
+      opacity: .70;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .ps-teams-info b{ font-weight: 900; color: #0033A0; }
   </style>
 </head>
 
@@ -220,14 +341,12 @@
 </header>
 
 <main class="wrap">
-  <!-- HERO: moderno + mantiene tu redacción -->
   <section class="home-hero">
     <div class="hero-badge">
       <span class="dot" aria-hidden="true"></span>
       <span><b>JRS</b> · iniciativa de la <b>Licenciatura en Economía (CCM)</b></span>
     </div>
 
-    <!-- FILA SUPERIOR -->
     <div class="hero-top-grid">
       <div>
         <div class="dynamic-line" aria-label="Línea dinámica">
@@ -236,7 +355,6 @@
           </span>
         </div>
 
-        <!-- Mantener exactamente la redacción y el hl-blue -->
         <h1>
           Un espacio para presentar investigación y discutir temas <span class="hl-blue">económicos y sociales</span>, con retroalimentación útil.
         </h1>
@@ -255,7 +373,6 @@
       </aside>
     </div>
 
-    <!-- FILA INFERIOR (FULL WIDTH) -->
     <div class="hero-bottom">
       <div class="actions actions-multi">
         <a class="btn-solid c1" href="calendario.html">Calendario</a>
@@ -289,7 +406,57 @@
     </div>
   </section>
 
-  <!-- ===== LO DE ABAJO (SE QUEDA) ===== -->
+  <!-- PRÓXIMA SESIÓN -->
+  <div class="section-head" style="margin-top:28px;">
+    <h2>Próxima sesión</h2>
+    <p class="small">Ver todas en <a href="calendario.html">Calendario</a>.</p>
+  </div>
+
+  <div class="proxima-sesion">
+    <div class="ps-header">
+      <span class="ps-badge">
+        <span class="dot-white" aria-hidden="true"></span>
+        Próxima sesión
+      </span>
+      <div class="ps-meta">
+        <span>📅 Miércoles 22 de abril, 2025</span>
+        <span>🕐 13:10 hrs</span>
+        <span>📍 A1-303</span>
+      </div>
+    </div>
+
+    <div class="ps-body">
+      <div class="ps-slot">
+        <div class="ps-slot-label senior">
+          <span class="pip senior"></span>
+          Presentación senior
+        </div>
+        <div class="ps-presenter">Mtro. Elam Rodríguez Alcaraz</div>
+        <div class="ps-affil">Banco de México</div>
+        <div class="ps-title">Mexico's Labor Market Through the Lens of Beveridge Curve</div>
+      </div>
+
+      <div class="ps-slot">
+        <div class="ps-slot-label junior">
+          <span class="pip junior"></span>
+          Presentación junior
+        </div>
+        <div class="ps-presenter">Vianey Gutiérrez Hernández<br>Rodrigo Alba Gómez<br>Mizael Rangel Ponce</div>
+        <div class="ps-affil">LEC-LTP · Tec de Monterrey</div>
+        <div class="ps-title">¿Quién cuida a las personas cuidadoras en México?</div>
+      </div>
+    </div>
+
+    <div class="ps-footer">
+      <span class="ps-teams-label">🖥 Vía Teams:</span>
+      <div class="ps-teams-info">
+        <span>Id. de reunión: <b>288 808 853 396 75</b></span>
+        <span>Código de acceso: <b>Bo3Gm7zG</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CÓMO FUNCIONA -->
   <div class="section-head">
     <h2>Cómo funciona</h2>
     <p class="small">Formato y tiempos en <a href="normas.html">Normas</a>.</p>
@@ -332,7 +499,6 @@
 </footer>
 
 <script>
-  // Rotating word
   const words = ["ideas", "feedback", "discusión", "papers", "métodos", "preguntas"];
   let wi = 0;
   const rotating = document.getElementById("rotatingWord");
@@ -341,12 +507,9 @@
     rotating.textContent = words[wi];
   }, 900);
 
-  // Counters since Feb 2025 (only days shown in stats)
   const start = new Date("2025-02-01T00:00:00");
   const now = new Date();
-  const ms = now - start;
-  const days = Math.floor(ms / (1000 * 60 * 60 * 24));
-
+  const days = Math.floor((now - start) / (1000 * 60 * 60 * 24));
   document.getElementById("daysSince").textContent = Math.max(0, days);
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
